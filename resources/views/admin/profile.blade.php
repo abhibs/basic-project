@@ -9,7 +9,7 @@
                     <div class="card"><br><br>
                         <center>
                             <img class="rounded-circle avatar-xl"
-                                src="{{ !empty($admin->image) ? url('upload/admin/' . $admin->image) : url('no_image.jpg') }}"
+                                src="{{ !empty($admin->image) ? url('storage/admin/' . $admin->image) : url('no_image.jpg') }}"
                                 alt="Card image cap">
                         </center>
 
@@ -18,7 +18,7 @@
                             <hr>
                             <h4 class="card-title">Admin Email : {{ $admin->email }} </h4>
                             <hr>
-                            <h4 class="card-title">Admin Phone : {{ $admin->username }} </h4>
+                            <h4 class="card-title">Admin Phone : {{ $admin->phone }} </h4>
                             <hr>
                             <h4 class="card-title">Admin Address : {{ $admin->address }} </h4>
                             <hr>
