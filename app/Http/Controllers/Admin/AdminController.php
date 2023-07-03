@@ -21,9 +21,17 @@ class AdminController extends Controller
         //  dd( $credentials);
         if (Auth::guard('admin')->attempt($credentials)) {
             // dd('hi');
-            return redirect()->route('admin-dashboard')->with('flash_success', 'Login Successful');
+            $notification1 = array(
+                'message' => 'Admin Login Successful',
+                'alert-type' => 'success'
+            );
+            return redirect()->route('admin-dashboard')->with($notification1);
         } else {
-            return back()->with('error', 'Invalid Credentials');
+            $notification2 = array(
+                'message' => 'Invalid Credentials',
+                'alert-type' => 'error'
+            );
+            return back()->with($notification2);
         }
     }
 
