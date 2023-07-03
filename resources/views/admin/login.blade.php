@@ -39,17 +39,18 @@
                         <h4 class="text-muted text-center font-size-18"><b>Admin Login</b></h4>
 
                         <div class="p-3">
-                            <form class="form-horizontal mt-3" action="index.html">
+                            <form class="form-horizontal mt-3" action="{{ route('admin-login-post') }}" method="POST">
+                                @csrf
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="text" required="" placeholder="Username">
+                                        <input class="form-control" type="text" name="email" placeholder="Email">
                                     </div>
                                 </div>
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="password" required="" placeholder="Password">
+                                        <input class="form-control" type="password" name="password" placeholder="Password">
                                     </div>
                                 </div>
 
