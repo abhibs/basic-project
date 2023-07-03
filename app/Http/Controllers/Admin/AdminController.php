@@ -58,4 +58,10 @@ class AdminController extends Controller
         return view('admin.profile', compact('admin'));
     }
 
+    public function adminProfileEdit()
+    {
+        $admin = Admin::first();
+        return view('admin.profile-edit', compact('admin'));
+    }
+
 }
