@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\Admin;
+
 
 class AdminController extends Controller
 {
@@ -50,5 +52,10 @@ class AdminController extends Controller
         return redirect()->route('admin-login')->with($notification);
     }
 
-    
+    public function adminProfile()
+    {
+        $admin = Admin::first();
+        return view('admin.profile', compact('admin'));
+    }
+
 }
