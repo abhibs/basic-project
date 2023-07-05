@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\PortfolioController;
+
 
 
 
@@ -37,6 +39,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/about/multiple/image/edit/{id}', [AboutController::class, 'editMultiImage'])->name('multiple-image-edit');
         Route::post('/about/multiple/image/update', [AboutController::class, 'updateMultiImage'])->name('multiple-image-update');
         Route::get('/about/multiple/image/delete/{id}', [AboutController::class, 'deleteMultiImage'])->name('multiple-image-delete');
+
+
+        Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
     });
 });
