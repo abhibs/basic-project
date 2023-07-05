@@ -50,6 +50,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'delete'])->name('portfolio-delete');
 
         Route::get('/blog/category', [BlogCategoryController::class, 'index'])->name('blog-category');
+        Route::get('/blog/category/create', [BlogCategoryController::class, 'create'])->name('blog-category-create');
 
     });
 });
