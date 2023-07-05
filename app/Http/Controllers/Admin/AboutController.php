@@ -66,4 +66,9 @@ class AboutController extends Controller
         }
 
     }
+
+    public function createMultiImage()
+    {
+        return view('admin.about.multipleimagecreate');
+    }
 }
