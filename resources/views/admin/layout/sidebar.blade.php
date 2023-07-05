@@ -35,10 +35,22 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Slider</span>
+                        <span>Slider Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('slider') }}">View Slider</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>About Page Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('about') }}">About Page</a></li>
+                      <li><a href="{{ route('multiple-image-create') }}">About Multi Image</a></li>
+                      <li><a href="{{ route('multiple-image-index') }}">All Multi Image</a></li>
                     </ul>
                 </li>
 
