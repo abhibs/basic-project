@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/about', [AboutController::class, 'index'])->name('about');
         Route::post('update/about', [AboutController::class, 'updateAbout'])->name('update-about');
         Route::get('/about/multiple/image/create', [AboutController::class, 'createMultiImage'])->name('multiple-image-create');
+        Route::post('about/multiple/image/store', [AboutController::class, 'storeMultiImage'])->name('multiple-image-store');
 
     });
 });
