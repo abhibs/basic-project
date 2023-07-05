@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\SliderController;
+
 
 Route::get('/test', function () {
     echo "Abhiram";
@@ -19,6 +21,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/profile/update', [AdminController::class, 'adminProfileUpdate'])->name('admin-profile-update');
         Route::get('/change/password', [Admincontroller::class, 'changePassword'])->name('admin-change-password');
         Route::post('/update/password', [AdminController::class, 'updatePassword'])->name('admin-password-update');
+
+
+        Route::get('/slider', [SliderController::class, 'index'])->name('slider');
 
     });
 });
