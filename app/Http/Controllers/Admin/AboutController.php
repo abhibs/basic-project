@@ -102,7 +102,7 @@ class AboutController extends Controller
             'alert-type' => 'success'
         );
 
-        return redirect()->back()->with($notification);
+        return redirect()->route('multiple-image-index')->with($notification);
 
 
     }
@@ -113,10 +113,42 @@ class AboutController extends Controller
         return view('admin.about.indexmultipleimage', compact('datas'));
     }
 
-    public function editMultiImage($id){
+    public function editMultiImage($id)
+    {
 
         $data = MultiImage::findOrFail($id);
-        return view('admin.about.editmultipleimage',compact('data'));
+        return view('admin.about.editmultipleimage', compact('data'));
 
-     }
+    }
+
+    public function updateMultiImage(Request $request)
+    {
+
+        $multi_image_id = $request->id;
+        $old_img = $request->old_image;
+
+        if ($request->file('image')) {
+            unlink($old_img);
+            $image = $request->file('image');
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension(); // 3434343443.jpg
+
+            Image::make($image)->resize(220, 220)->save('storage/multipleimage/' . $name_gen);
+            $save_url = 'storage/multipleimage/' . $name_gen;
+
+            MultiImage::findOrFail($multi_image_id)->update([
+
+                'image' => $save_url,
+
+            ]);
+
+            $notification = array(
+                'message' => 'Multi Image Updated Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('multiple-image-index')->with($notification);
+
+        }
+
+    }
 }

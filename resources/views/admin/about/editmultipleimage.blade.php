@@ -12,7 +12,7 @@
 
                             <h4 class="card-title">Update Multi Image</h4> <br><br>
 
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('multiple-image-update') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <input type="hidden" name="id" value="{{ $data->id }}">
@@ -31,8 +31,8 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label"> </label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg"
-                                            src="{{ asset($data->image) }}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" src="{{ asset($data->image) }}"
+                                            alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->
