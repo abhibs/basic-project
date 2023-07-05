@@ -8,5 +8,9 @@ use App\Models\BlogCategory;
 
 class BlogCategoryController extends Controller
 {
-
+    public function index()
+    {
+        $datas = BlogCategory::latest()->get();
+        return view('admin.blogcategory.index', compact('datas'));
+    }
 }

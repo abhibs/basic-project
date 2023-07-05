@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\PortfolioController;
+use App\Http\Controllers\Admin\BlogCategoryController;
 
 
 
@@ -47,6 +48,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/portfolio/edit/{id}', [PortfolioController::class, 'edit'])->name('portfolio-edit');
         Route::post('/portfolio/update', [PortfolioController::class, 'update'])->name('portfolio-update');
         Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'delete'])->name('portfolio-delete');
+
+        Route::get('/blog/category', [BlogCategoryController::class, 'index'])->name('blog-category');
 
     });
 });
