@@ -12,7 +12,7 @@
 
                             <h4 class="card-title">Portfolio Page </h4>
 
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('portfolio-store') }}" enctype="multipart/form-data">
                                 @csrf
 
 
