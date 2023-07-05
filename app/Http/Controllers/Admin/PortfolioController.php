@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use Illuminate\Support\Carbon;
 use Image;
+
 class PortfolioController extends Controller
 {
     public function index()
@@ -62,4 +63,12 @@ class PortfolioController extends Controller
         return redirect()->route('portfolio')->with($notification);
 
     }
+
+    public function edit($id)
+    {
+        $data = Portfolio::findOrFail($id);
+        return view('admin.portfolio.edit', compact('data'));
+    }
+
+
 }

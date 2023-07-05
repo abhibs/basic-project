@@ -44,6 +44,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
         Route::get('/portfolio/create', [PortfolioController::class, 'create'])->name('portfolio-create');
         Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio-store');
+        Route::get('/portfolio/edit/{id}', [PortfolioController::class, 'edit'])->name('portfolio-edit');
 
     });
 });
