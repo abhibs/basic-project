@@ -13,4 +13,8 @@ class PortfolioController extends Controller
         $datas = Portfolio::latest()->get();
         return view('admin.portfolio.index',compact('datas'));
     }
+
+    public function create(){
+        return view('admin.portfolio.create');
+    }
 }
