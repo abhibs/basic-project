@@ -112,4 +112,11 @@ class AboutController extends Controller
         $datas = MultiImage::get();
         return view('admin.about.indexmultipleimage', compact('datas'));
     }
+
+    public function editMultiImage($id){
+
+        $data = MultiImage::findOrFail($id);
+        return view('admin.about.editmultipleimage',compact('data'));
+
+     }
 }
