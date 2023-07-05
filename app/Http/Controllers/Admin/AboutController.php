@@ -39,13 +39,14 @@ class AboutController extends Controller
                     'image' => $save_url,
 
                 ]);
-                $notification = array(
-                    'message' => 'About Page Updated with Image Successfully',
-                    'alert-type' => 'success'
-                );
-
-                return redirect()->back()->with($notification);
             }
+
+            $notification = array(
+                'message' => 'About Page Updated with Image Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->back()->with($notification);
         } else {
 
             About::findOrFail($about_id)->update([
