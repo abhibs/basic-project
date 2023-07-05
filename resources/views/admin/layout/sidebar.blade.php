@@ -49,8 +49,20 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('about') }}">About Page</a></li>
-                      <li><a href="{{ route('multiple-image-create') }}">About Multi Image</a></li>
-                      <li><a href="{{ route('multiple-image-index') }}">All Multi Image</a></li>
+                        <li><a href="{{ route('multiple-image-create') }}">About Multi Image</a></li>
+                        <li><a href="{{ route('multiple-image-index') }}">All Multi Image</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Portfolio Page Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('portfolio') }}">All Portfolio</a></li>
+                        <li><a href="{{ route('portfolio-create') }}">Add Portfolio</a></li>
+
                     </ul>
                 </li>
 
