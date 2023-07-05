@@ -20,7 +20,7 @@
                             @endif
 
 
-                            <form method="post" action="">
+                            <form method="post" action="{{ route('admin-password-update') }}">
                                 @csrf
 
                                 <div class="row mb-3">

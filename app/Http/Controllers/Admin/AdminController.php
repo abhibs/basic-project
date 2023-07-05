@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\Admin;
 use Image;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class AdminController extends Controller
@@ -108,9 +110,43 @@ class AdminController extends Controller
 
     }
 
-    public function changePassword(){
+    public function changePassword()
+    {
 
         return view('admin.change_password');
+
+    }
+
+    public function updatePassword(Request $request)
+    {
+
+        $request->validate([
+            'oldpassword' => 'required',
+            'newpassword' => 'required',
+            'confirm_password' => 'required|same:newpassword',
+
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->oldpassword, $hashedPassword)) {
+            $admin = Admin::find(Auth::id());
+            $admin->password = bcrypt($request->newpassword);
+            $admin->save();
+
+            $notification1 = array(
+                'message' => 'Password Updated Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('admin-login')->with($notification1);
+        } else {
+
+            $notification2 = array(
+                'message' => 'Old password is not match',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification2);
+        }
 
     }
 
