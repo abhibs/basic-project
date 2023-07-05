@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         Route::get('/about', [AboutController::class, 'index'])->name('about');
+        Route::post('update/about', [AboutController::class, 'updateAbout'])->name('update-about');
 
     });
 });
