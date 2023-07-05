@@ -37,9 +37,9 @@
 
                                 <tbody>
                                     @php($i = 1)
-                                    @foreach ($datas as $item)
+                                    @foreach ($datas as $key=>$item)
                                         <tr>
-                                            <td> {{ $i++ }} </td>
+                                            <td> {{ $key+1 }} </td>
                                             <td> <img src="{{ asset($item->image) }}"
                                                     style="width: 60px; height: 50px;"> </td>
 
