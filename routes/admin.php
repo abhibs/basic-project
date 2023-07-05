@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\AboutController;
+
 
 
 Route::get('/test', function () {
@@ -25,6 +27,9 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/slider', [SliderController::class, 'index'])->name('slider');
         Route::post('update/slider', [SliderController::class, 'updateSlider'])->name('update-slider');
+
+
+        Route::get('/about', [AboutController::class, 'index'])->name('about');
 
     });
 });
