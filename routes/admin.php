@@ -24,6 +24,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         Route::get('/slider', [SliderController::class, 'index'])->name('slider');
+        Route::post('update/slider', [SliderController::class, 'updateSlider'])->name('update-slider');
 
     });
 });

@@ -12,10 +12,12 @@
 
                             <h4 class="card-title">Home Slide Page </h4>
 
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update-slider') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <input type="hidden" name="id" value="{{ $data->id }}">
+                                <input type="hidden" name="old_image" value="{{ $data->image }}">
+
 
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
@@ -29,7 +31,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Short Title </label>
                                     <div class="col-sm-10">
-                                        <input name="short_title" class="form-control" type="text"
+                                        <input name="content" class="form-control" type="text"
                                             value="{{ $data->content }}" id="example-text-input">
                                     </div>
                                 </div>
@@ -39,7 +41,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Video URL </label>
                                     <div class="col-sm-10">
-                                        <input name="video_url" class="form-control" type="text"
+                                        <input name="video" class="form-control" type="text"
                                             value="{{ $data->video }}" id="example-text-input">
                                     </div>
                                 </div>
