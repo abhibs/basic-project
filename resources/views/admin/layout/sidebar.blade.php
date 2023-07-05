@@ -73,6 +73,8 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('blog-category') }}">All Blog Category</a></li>
+                        <li><a href="{{ route('blog-category-create') }}">Add Blog Category</a></li>
+
                     </ul>
                 </li>
 
