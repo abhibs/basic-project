@@ -46,6 +46,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio-store');
         Route::get('/portfolio/edit/{id}', [PortfolioController::class, 'edit'])->name('portfolio-edit');
         Route::post('/portfolio/update', [PortfolioController::class, 'update'])->name('portfolio-update');
+        Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'delete'])->name('portfolio-delete');
 
     });
 });

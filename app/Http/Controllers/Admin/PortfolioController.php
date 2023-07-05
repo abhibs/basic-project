@@ -119,4 +119,21 @@ class PortfolioController extends Controller
         }
 
     }
+
+    public function delete($id){
+
+        $data = Portfolio::findOrFail($id);
+        $img = $data->image;
+        unlink($img);
+
+        Portfolio::findOrFail($id)->delete();
+
+         $notification = array(
+            'message' => 'Portfolio Image Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+     }
 }
