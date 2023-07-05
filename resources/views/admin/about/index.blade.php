@@ -52,7 +52,7 @@
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Long Description
                                     </label>
                                     <div class="col-sm-10">
-                                        <textarea name="description">
+                                        <textarea id="elm1" name="description">
    {{ $data->description }}
       </textarea>
                                     </div>

@@ -133,6 +133,16 @@
     </script>
     <!-- toastr js end -->
 
+    {{-- text editor start --}}
+
+    <!--tinymce js-->
+    <script src="{{ asset('admin/assets/libs/tinymce/tinymce.min.js') }} "></script>
+
+    <!-- init js -->
+    <script src="{{ asset('admin/assets/js/pages/form-editor.init.js') }} "></script>
+
+    {{-- text editor end --}}
+
 </body>
 
 </html>
