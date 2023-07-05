@@ -106,4 +106,10 @@ class AboutController extends Controller
 
 
     }
+
+    public function allMultiImage()
+    {
+        $datas = MultiImage::get();
+        return view('admin.about.indexmultipleimage', compact('datas'));
+    }
 }
