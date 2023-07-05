@@ -37,17 +37,18 @@
 
                                 <tbody>
                                     @php($i = 1)
-                                    @foreach ($datas as $key=>$item)
+                                    @foreach ($datas as $key => $item)
                                         <tr>
-                                            <td> {{ $key+1 }} </td>
-                                            <td> <img src="{{ asset($item->image) }}"
-                                                    style="width: 60px; height: 50px;"> </td>
+                                            <td> {{ $key + 1 }} </td>
+                                            <td> <img src="{{ asset($item->image) }}" style="width: 60px; height: 50px;">
+                                            </td>
 
                                             <td>
-                                                <a href="{{ route('multiple-image-edit', $item->id) }}" class="btn btn-info sm"
-                                                    title="Edit Data"> <i class="fas fa-edit"></i> </a>
+                                                <a href="{{ route('multiple-image-edit', $item->id) }}"
+                                                    class="btn btn-info sm" title="Edit Data"> <i class="fas fa-edit"></i>
+                                                </a>
 
-                                                <a href=""
+                                                <a href="{{ route('multiple-image-delete', $item->id) }}"
                                                     class="btn btn-danger sm" title="Delete Data"> <i
                                                         class="fas fa-trash-alt"></i> </a>
 
