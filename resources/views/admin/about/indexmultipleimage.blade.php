@@ -49,7 +49,7 @@
                                                 </a>
 
                                                 <a href="{{ route('multiple-image-delete', $item->id) }}"
-                                                    class="btn btn-danger sm" title="Delete Data"> <i
+                                                    class="btn btn-danger sm" title="Delete Data" id="delete"> <i
                                                         class="fas fa-trash-alt"></i> </a>
 
                                             </td>
