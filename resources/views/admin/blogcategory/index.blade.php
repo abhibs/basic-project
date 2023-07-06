@@ -40,7 +40,7 @@
                                     @foreach ($datas as $key => $item)
                                         <tr>
                                             <td> {{ $key + 1 }} </td>
-                                            <td> {{ $item->names }} </td>
+                                            <td> {{ $item->name }} </td>
 
                                             <td>
                                                 <a href=""

@@ -14,8 +14,29 @@ class BlogCategoryController extends Controller
         return view('admin.blogcategory.index', compact('datas'));
     }
 
-    public function create(){
+    public function create()
+    {
 
         return view('admin.blogcategory.create');
+    }
+
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            'name' => 'required'
+        ], [
+            'name.required' => 'Blog Cateogry Name is Required',
+        ]);
+
+        BlogCategory::insert([
+            'name' => $request->name,
+        ]);
+
+        $notification = array(
+            'message' => 'Blog Category Inserted Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('blog-category')->with($notification);
     }
 }
