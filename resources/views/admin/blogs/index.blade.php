@@ -52,7 +52,7 @@
                                                 <a href="{{ route('blog-edit', $item->id) }}" class="btn btn-info sm"
                                                     title="Edit Data"> <i class="fas fa-edit"></i> </a>
 
-                                                <a href="" class="btn btn-danger sm"
+                                                <a href="{{ route('blog-delete', $item->id) }}" class="btn btn-danger sm"
                                                     title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i>
                                                 </a>
 

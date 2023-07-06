@@ -105,4 +105,20 @@ class BlogController extends Controller
         }
 
     }
+
+    public function delete($id)
+    {
+        $data = Blog::findOrFail($id);
+        $img = $data->image;
+        unlink($img);
+        Blog::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Blog Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }
 }

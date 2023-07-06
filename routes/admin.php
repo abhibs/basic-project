@@ -63,6 +63,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/blog/store', [BlogController::class, 'store'])->name('blog-store');
         Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog-edit');
         Route::post('/blog/update', [BlogController::class, 'update'])->name('blog-update');
+        Route::get('/blog/{id}', [BlogController::class, 'delete'])->name('blog-delete');
 
     });
 });
