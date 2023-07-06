@@ -39,4 +39,10 @@ class BlogCategoryController extends Controller
         );
         return redirect()->route('blog-category')->with($notification);
     }
+
+    public function edit($id)
+    {
+        $data = BlogCategory::findOrFail($id);
+        return view('admin.blogcategory.edit', compact('data'));
+    }
 }

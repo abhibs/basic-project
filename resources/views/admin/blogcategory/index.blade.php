@@ -43,7 +43,7 @@
                                             <td> {{ $item->name }} </td>
 
                                             <td>
-                                                <a href=""
+                                                <a href="{{ route('blog-category-edit', $item->id) }}"
                                                     class="btn btn-info sm" title="Edit Data"> <i class="fas fa-edit"></i>
                                                 </a>
 
