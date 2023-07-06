@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\BlogCategoryController;
+use App\Http\Controllers\Admin\BlogController;
+
 
 
 
@@ -55,6 +57,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/blog/category/edit/{id}', [BlogCategoryController::class, 'edit'])->name('blog-category-edit');
         Route::post('/blog/category/update', [BlogCategoryController::class, 'update'])->name('blog-category-update');
         Route::get('/blog/category/{id}', [BlogCategoryController::class, 'delete'])->name('blog-category-delete');
+
+        Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
     });
 });
