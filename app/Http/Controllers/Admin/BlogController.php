@@ -49,4 +49,11 @@ class BlogController extends Controller
         return redirect()->route('blog')->with($notification);
 
     }
+
+    public function edit($id)
+    {
+        $data = Blog::findOrFail($id);
+        $categories = BlogCategory::orderBy('name','ASC')->get();
+       return view('admin.blogs.edit',compact('data','categories'));
+   }
 }
