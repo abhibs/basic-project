@@ -45,4 +45,20 @@ class BlogCategoryController extends Controller
         $data = BlogCategory::findOrFail($id);
         return view('admin.blogcategory.edit', compact('data'));
     }
+
+    public function update(Request $request){
+        $id = $request->id;
+
+        BlogCategory::findOrFail($id)->update([
+               'name' => $request->name,
+           ]);
+
+           $notification = array(
+           'message' => 'Blog Category Updated Successfully',
+           'alert-type' => 'success'
+       );
+
+       return redirect()->route('blog-category')->with($notification);
+
+   }
 }

@@ -53,6 +53,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/blog/category/create', [BlogCategoryController::class, 'create'])->name('blog-category-create');
         Route::post('/blog/category/store', [BlogCategoryController::class, 'store'])->name('blog-category-store');
         Route::get('/blog/category/edit/{id}', [BlogCategoryController::class, 'edit'])->name('blog-category-edit');
+        Route::post('/blog/category/update', [BlogCategoryController::class, 'update'])->name('blog-category-update');
 
     });
 });
