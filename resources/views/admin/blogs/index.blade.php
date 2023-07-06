@@ -42,7 +42,7 @@
                                     @foreach ($datas as $key => $item)
                                         <tr>
                                             <td> {{ $key+1 }} </td>
-                                            <td> {{ $item->blog_category_id }} </td>
+                                            <td> {{ $item->category->name }} </td>
                                             <td> {{ $item->title }} </td>
                                             <td> {{ $item->tags }} </td>
                                             <td> <img src="{{ asset($item->image) }}"
