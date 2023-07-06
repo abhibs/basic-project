@@ -18,7 +18,7 @@
 
                             <h4 class="card-title">Add Blog Page </h4>
 
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('blog-store') }}" enctype="multipart/form-data">
                                 @csrf
 
 
