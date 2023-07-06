@@ -1,6 +1,13 @@
 @extends('admin.layout.app')
 @section('content')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        .bootstrap-tagsinput .tag{
+            margin-right: 2px;
+            color: #b70000;
+            font-weight: 700px;
+        }
+    </style>
     <div class="page-content">
         <div class="container-fluid">
 
@@ -43,7 +50,12 @@
                                     </div>
                                 </div>
                                 <!-- end row -->
-
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Blog Tags </label>
+                                    <div class="col-sm-10">
+                                        <input name="tags" value="laravel,flutter" class="form-control" type="text" data-role="tagsinput">
+                                    </div>
+                                </div>
 
 
                                 <!-- end row -->

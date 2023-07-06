@@ -37,6 +37,12 @@
 
     <!-- toastr Css End-->
 
+    {{-- tags start --}}
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" >
+
+    {{-- tags end --}}
+
 </head>
 
 <body data-topbar="dark">
@@ -157,6 +163,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script src="{{ asset('admin/assets/js/code.js') }}"></script>
+
+    {{-- tags start --}}
+
+    <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
+
+    {{-- tags end --}}
 
 </body>
 
