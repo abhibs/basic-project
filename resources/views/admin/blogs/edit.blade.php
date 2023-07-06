@@ -20,10 +20,11 @@
 
                             <h4 class="card-title">Edit Blog Page </h4>
 
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('blog-update') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <input type="hidden" name="id" value="{{ $data->id }}">
+                                <input type="hidden" name="old_image" value="{{ $data->image }}">
 
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Blog Category
@@ -68,7 +69,7 @@
                                     </label>
                                     <div class="col-sm-10">
                                         <textarea id="elm1" name="description">
-      {{ $data->escription }}
+      {{ $data->description }}
       </textarea>
                                     </div>
                                 </div>
