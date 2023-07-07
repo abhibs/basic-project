@@ -7,9 +7,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
-
-
-
+use App\Http\Controllers\Admin\FooterController;
 
 
 Route::get('/test', function () {
@@ -64,6 +62,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog-edit');
         Route::post('/blog/update', [BlogController::class, 'update'])->name('blog-update');
         Route::get('/blog/{id}', [BlogController::class, 'delete'])->name('blog-delete');
+
+
+        Route::get('/footer', [FooterController::class, 'index'])->name('footer');
 
     });
 });
