@@ -65,6 +65,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         Route::get('/footer', [FooterController::class, 'index'])->name('footer');
+        Route::post('update/footer', [FooterController::class, 'update'])->name('update-footer');
 
     });
 });
