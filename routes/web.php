@@ -23,6 +23,7 @@ Route::get('portfolio', [PortfolioController::class, 'portfolio'])->name('home-p
 Route::get('portfolio/detail/{id}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
 Route::get('blog', [BlogController::class, 'blog'])->name('home-blog');
 Route::get('blog/detail/{id}', [BlogController::class, 'blogDetail'])->name('blog-detail');
+Route::get('category/blog/{id}', [BlogController::class, 'categoryBlog'])->name('category-blog');
 
 
 

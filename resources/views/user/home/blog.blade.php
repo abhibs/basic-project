@@ -13,7 +13,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-9">
                     <div class="blog__post__item">
                         <div class="blog__post__thumb">
-                            <a href="{{ route('blog-detail', $tiem->id) }}"><img
+                            <a href="{{ route('blog-detail', $item->id) }}"><img
                                     src="{{ !empty($item->image) ? url($item->image) : url('no_image.jpg') }}"
                                     alt=""></a>
                             <div class="blog__post__tags">
@@ -22,8 +22,8 @@
                         </div>
                         <div class="blog__post__content">
                             <span class="date">{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }} </span>
-                            <h3 class="title"><a href="{{ route('blog-detail', $tiem->id) }}">{{ $item->title }}</a></h3>
-                            <a href="{{ route('blog-detail', $tiem->id) }}" class="read__more">Read mORe</a>
+                            <h3 class="title"><a href="{{ route('blog-detail', $item->id) }}">{{ $item->title }}</a></h3>
+                            <a href="{{ route('blog-detail', $item->id) }}" class="read__more">Read mORe</a>
                         </div>
                     </div>
                 </div>
