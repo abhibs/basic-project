@@ -43,14 +43,14 @@
                             <div class="row gx-0 align-items-center">
                                 <div class="col-lg-6 col-md-10">
                                     <div class="portfolio__inner__thumb">
-                                        <a href="portfolio-details.html">
+                                        <a href="{{ route('portfolio-detail',$item->id) }}">
                                             <img src="{{ asset($item->image) }}" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-10">
                                     <div class="portfolio__inner__content">
-                                        <h2 class="title"><a href="">{{ $item->title }}</a>
+                                        <h2 class="title"><a href="{{ route('portfolio-detail',$item->id) }}">{{ $item->title }}</a>
                                         </h2>
                                         <p>{!! Str::limit($item->description, 200) !!} </p>
                                         <a href="" class="link">View Case
