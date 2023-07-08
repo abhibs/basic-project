@@ -90,6 +90,17 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-profile-line"></i>
+                        <span>User Query</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('query') }}">All User Query</a></li>
+
+                    </ul>
+                </li>
+
 
 
             </ul>
