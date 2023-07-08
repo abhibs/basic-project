@@ -238,7 +238,7 @@
     <!-- portfolio-area-end -->
 
     <!-- partner-area -->
-    <section class="partner">
+    {{-- <section class="partner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -295,7 +295,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- partner-area-end -->
 
     <!-- testimonial-area -->
