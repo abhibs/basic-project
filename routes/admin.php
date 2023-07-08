@@ -8,6 +8,9 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\FooterController;
+use App\Http\Controllers\Admin\QueryController;
+
+
 
 
 Route::get('/test', function () {
@@ -66,6 +69,9 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/footer', [FooterController::class, 'index'])->name('footer');
         Route::post('update/footer', [FooterController::class, 'update'])->name('update-footer');
+
+
+        Route::get('/query', [QueryController::class, 'index'])->name('query');
 
     });
 });
