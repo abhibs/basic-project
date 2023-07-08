@@ -299,7 +299,7 @@
     <!-- partner-area-end -->
 
     <!-- testimonial-area -->
-    <section class="testimonial">
+    {{-- <section class="testimonial">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 order-0 order-lg-2">
@@ -354,7 +354,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- testimonial-area-end -->
 
     <!-- blog-area -->
