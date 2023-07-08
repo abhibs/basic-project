@@ -50,8 +50,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-10">
                                     <div class="portfolio__inner__content">
-                                        <h2 class="title"><a
-                                                href="">{{ $item->title }}</a>
+                                        <h2 class="title"><a href="">{{ $item->title }}</a>
                                         </h2>
                                         <p>{!! Str::limit($item->description, 200) !!} </p>
                                         <a href="" class="link">View Case
@@ -89,11 +88,24 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="homeContact__form">
-                                <form action="#">
-                                    <input type="text" placeholder="Enter name*">
-                                    <input type="email" placeholder="Enter mail*">
-                                    <input type="number" placeholder="Enter number*">
+                                <form action="{{ route('query-store') }}" method="POST">
+                                    @csrf
+                                    <input type="text" placeholder="Enter name*" name="name">
+                                    @error('name')
+                                        <span class="text-danger"> {{ $message }} </span>
+                                    @enderror
+                                    <input type="email" name="email" placeholder="Enter mail*">
+                                    @error('email')
+                                        <span class="text-danger"> {{ $message }} </span>
+                                    @enderror
+                                    <input type="number"name="phone" placeholder="Enter number*">
+                                    @error('phone')
+                                        <span class="text-danger"> {{ $message }} </span>
+                                    @enderror
                                     <textarea name="message" placeholder="Enter Massage*"></textarea>
+                                    @error('message')
+                                        <span class="text-danger"> {{ $message }} </span>
+                                    @enderror
                                     <button type="submit">Send Message</button>
                                 </form>
                             </div>
