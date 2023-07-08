@@ -12,7 +12,7 @@ class BlogController extends Controller
     public function blog()
     {
         $categories = BlogCategory::orderBy('name', 'ASC')->get();
-        $datas = Blog::latest()->get();
+        $datas = Blog::latest()->paginate(2);
         return view('user.blog', compact('datas', 'categories'));
     }
 

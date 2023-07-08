@@ -45,7 +45,8 @@
                     @foreach ($datas as $item)
                         <div class="standard__blog__post">
                             <div class="standard__blog__thumb">
-                                <a href="{{ route('blog-detail', $item->id) }}"><img src="{{ asset($item->image) }}" alt=""></a>
+                                <a href="{{ route('blog-detail', $item->id) }}"><img src="{{ asset($item->image) }}"
+                                        alt=""></a>
                                 <a href="{{ route('blog-detail', $item->id) }}" class="blog__link"><i
                                         class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -68,7 +69,7 @@
 
 
                     <div class="pagination-wrap">
-                        {{-- {{ $allblogs->links('vendor.pagination.custom') }} --}}
+                        {{ $datas->links('vendor.pagination.custom') }}
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -88,11 +89,12 @@
                                 @foreach ($datas as $all)
                                     <li class="rc__post__item">
                                         <div class="rc__post__thumb">
-                                            <a href="{{ route('blog-detail', $item->id) }}"><img src="{{ asset($all->image) }} "
-                                                    alt=""></a>
+                                            <a href="{{ route('blog-detail', $item->id) }}"><img
+                                                    src="{{ asset($all->image) }} " alt=""></a>
                                         </div>
                                         <div class="rc__post__content">
-                                            <h5 class="title"><a href="{{ route('blog-detail', $item->id) }}">{{ $all->title }}
+                                            <h5 class="title"><a
+                                                    href="{{ route('blog-detail', $item->id) }}">{{ $all->title }}
                                                 </a></h5>
                                             <span class="post-date"><i class="fal fa-calendar-alt"></i>
                                                 {{ Carbon\Carbon::parse($all->created_at)->diffForHumans() }} </span>
@@ -115,7 +117,7 @@
                         </div>
 
 
-                       
+
                     </aside>
                 </div>
             </div>
