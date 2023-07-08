@@ -9,7 +9,7 @@
     <!-- about-area-end -->
 
     <!-- services-area -->
-    <section class="services">
+    {{-- <section class="services">
         <div class="container">
             <div class="services__title__wrap">
                 <div class="row align-items-center justify-content-between">
@@ -157,7 +157,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- services-area-end -->
 
     <!-- work-process-area -->
