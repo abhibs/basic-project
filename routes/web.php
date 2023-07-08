@@ -18,6 +18,7 @@ Route::get('contact', [ContactController::class, 'create'])->name('contact-creat
 Route::post('contact/store', [ContactController::class, 'store'])->name('contact-store');
 Route::get('about', [AboutController::class, 'about'])->name('home-about');
 Route::get('portfolio', [PortfolioController::class, 'portfolio'])->name('home-portfolio');
+Route::get('portfolio/detail/{id}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
 
 
 
