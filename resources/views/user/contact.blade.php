@@ -43,7 +43,7 @@
         <!-- contact-area -->
         <div class="contact-area">
             <div class="container">
-                <form method="post" action="" class="contact__form">
+                <form method="post" action="{{ route('contact-store') }}" class="contact__form">
                     @csrf
 
                     <div class="row">
@@ -76,6 +76,7 @@
                     @error('message')
                         <span class="text-danger"> {{ $message }} </span>
                     @enderror
+                    <br>
                     <button type="submit" class="btn">send massage</button>
                 </form>
             </div>
