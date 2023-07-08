@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\QueryController;
+use App\Http\Controllers\Admin\ContactController;
 
 
 
@@ -73,6 +74,8 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/query', [QueryController::class, 'index'])->name('query');
         Route::get('/query/{id}', [QueryController::class, 'delete'])->name('query-delete');
+
+        Route::get('/contact', [ContactController::class, 'index'])->name('user-contact');
 
     });
 });
