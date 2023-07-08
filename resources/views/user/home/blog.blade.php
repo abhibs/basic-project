@@ -17,7 +17,7 @@
                                     src="{{ !empty($item->image) ? url($item->image) : url('no_image.jpg') }}"
                                     alt=""></a>
                             <div class="blog__post__tags">
-                                <a href="blog.html">{{ $item->category->name }}</a>
+                                <a href="{{ route('category-blog', $item->id) }}">{{ $item->category->name }}</a>
                             </div>
                         </div>
                         <div class="blog__post__content">
