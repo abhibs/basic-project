@@ -22,6 +22,8 @@ Route::get('about', [AboutController::class, 'about'])->name('home-about');
 Route::get('portfolio', [PortfolioController::class, 'portfolio'])->name('home-portfolio');
 Route::get('portfolio/detail/{id}', [PortfolioController::class, 'portfolioDetail'])->name('portfolio-detail');
 Route::get('blog', [BlogController::class, 'blog'])->name('home-blog');
+Route::get('blog/detail/{id}', [BlogController::class, 'blogDetail'])->name('blog-detail');
+
 
 
 
