@@ -13,4 +13,14 @@ class QueryController extends Controller
         $datas = Query::latest()->get();
         return view('admin.query.index', compact('datas'));
     }
+
+    public function delete($id)
+    {
+        Query::findOrFail($id)->delete();
+        $notification = array(
+            'message' => 'User Query Deleted Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }

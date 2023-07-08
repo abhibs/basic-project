@@ -48,7 +48,7 @@
                                             <td> {{ $item->phone }} </td>
                                             <td> {{ $item->message }} </td>
                                             <td>
-                                                <a href="" class="btn btn-danger sm" title="Delete Data"
+                                                <a href="{{ route('query-delete', $item->id) }}" class="btn btn-danger sm" title="Delete Data"
                                                     id="delete"> <i class="fas fa-trash-alt"></i> </a>
                                             </td>
 
