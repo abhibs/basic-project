@@ -87,8 +87,8 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a></h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a></h4>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -110,9 +110,9 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a>
                                         </h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -136,9 +136,9 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a>
                                         </h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -162,9 +162,9 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a>
                                         </h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -188,9 +188,9 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a>
                                         </h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -214,9 +214,9 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a>
                                         </h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -240,8 +240,8 @@
                                     </div>
                                     <div class="portfolio__overlay__content">
                                         <span>{{ $item->name }}</span>
-                                        <h4 class="title"><a href="portfolio-details.html">{{ $item->title }}</a></h4>
-                                        <a href="portfolio-details.html" class="link">Case Study</a>
+                                        <h4 class="title"><a href="{{ route('portfolio-detail', $item->id) }}">{{ $item->title }}</a></h4>
+                                        <a href="{{ route('portfolio-detail', $item->id) }}" class="link">Case Study</a>
                                     </div>
                                 </div>
                             @endforeach
