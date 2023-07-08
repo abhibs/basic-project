@@ -76,6 +76,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/query/{id}', [QueryController::class, 'delete'])->name('query-delete');
 
         Route::get('/contact', [ContactController::class, 'index'])->name('user-contact');
+        Route::get('/query/{id}', [ContactController::class, 'delete'])->name('user-contact-delete');
 
     });
 });

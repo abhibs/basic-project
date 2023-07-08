@@ -50,7 +50,7 @@
                                             <td> {{ $item->subject }} </td>
                                             <td> {{ $item->message }} </td>
                                             <td>
-                                                <a href="" class="btn btn-danger sm"
+                                                <a href="{{ route('user-contact-delete', $item->id) }}" class="btn btn-danger sm"
                                                     title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i>
                                                 </a>
                                             </td>
