@@ -1,15 +1,18 @@
 @extends('user.layout.app')
 @section('content')
-    <!-- banner-area -->
-    @include('user.home.banner')
-    <!-- banner-area-end -->
+@section('title')
+    Home
+@endsection
+<!-- banner-area -->
+@include('user.home.banner')
+<!-- banner-area-end -->
 
-    <!-- about-area -->
-    @include('user.home.about')
-    <!-- about-area-end -->
+<!-- about-area -->
+@include('user.home.about')
+<!-- about-area-end -->
 
-    <!-- services-area -->
-    {{-- <section class="services">
+<!-- services-area -->
+{{-- <section class="services">
         <div class="container">
             <div class="services__title__wrap">
                 <div class="row align-items-center justify-content-between">
@@ -158,87 +161,87 @@
             </div>
         </div>
     </section> --}}
-    <!-- services-area-end -->
+<!-- services-area-end -->
 
-    <!-- work-process-area -->
-    <section class="work__process">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-8">
-                    <div class="section__title text-center">
-                        <span class="sub-title">03 - Working Process</span>
-                        <h2 class="title">A clear product design process is the basis of success</h2>
+<!-- work-process-area -->
+<section class="work__process">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="section__title text-center">
+                    <span class="sub-title">03 - Working Process</span>
+                    <h2 class="title">A clear product design process is the basis of success</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row work__process__wrap">
+            <div class="col">
+                <div class="work__process__item">
+                    <span class="work__process_step">Step - 01</span>
+                    <div class="work__process__icon">
+                        <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon01.png') }}"
+                            alt="">
+                        <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon01.png') }}" alt="">
+                    </div>
+                    <div class="work__process__content">
+                        <h4 class="title">Discover</h4>
+                        <p>Initial ideas or inspiration & Establishment of user needs.</p>
                     </div>
                 </div>
             </div>
-            <div class="row work__process__wrap">
-                <div class="col">
-                    <div class="work__process__item">
-                        <span class="work__process_step">Step - 01</span>
-                        <div class="work__process__icon">
-                            <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon01.png') }}"
-                                alt="">
-                            <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon01.png') }}" alt="">
-                        </div>
-                        <div class="work__process__content">
-                            <h4 class="title">Discover</h4>
-                            <p>Initial ideas or inspiration & Establishment of user needs.</p>
-                        </div>
+            <div class="col">
+                <div class="work__process__item">
+                    <span class="work__process_step">Step - 02</span>
+                    <div class="work__process__icon">
+                        <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon02.png') }}"
+                            alt="">
+                        <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon02.png') }}" alt="">
+                    </div>
+                    <div class="work__process__content">
+                        <h4 class="title">Define</h4>
+                        <p>Interpretation & Alignment of findings to project objectives.</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="work__process__item">
-                        <span class="work__process_step">Step - 02</span>
-                        <div class="work__process__icon">
-                            <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon02.png') }}"
-                                alt="">
-                            <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon02.png') }}" alt="">
-                        </div>
-                        <div class="work__process__content">
-                            <h4 class="title">Define</h4>
-                            <p>Interpretation & Alignment of findings to project objectives.</p>
-                        </div>
+            </div>
+            <div class="col">
+                <div class="work__process__item">
+                    <span class="work__process_step">Step - 03</span>
+                    <div class="work__process__icon">
+                        <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon03.png') }}"
+                            alt="">
+                        <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon03.png') }}" alt="">
+                    </div>
+                    <div class="work__process__content">
+                        <h4 class="title">Develop</h4>
+                        <p>Design-Led concept and Proposals hearted & assessed</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="work__process__item">
-                        <span class="work__process_step">Step - 03</span>
-                        <div class="work__process__icon">
-                            <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon03.png') }}"
-                                alt="">
-                            <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon03.png') }}" alt="">
-                        </div>
-                        <div class="work__process__content">
-                            <h4 class="title">Develop</h4>
-                            <p>Design-Led concept and Proposals hearted & assessed</p>
-                        </div>
+            </div>
+            <div class="col">
+                <div class="work__process__item">
+                    <span class="work__process_step">Step - 04</span>
+                    <div class="work__process__icon">
+                        <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon04.png') }}"
+                            alt="">
+                        <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon04.png') }}" alt="">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="work__process__item">
-                        <span class="work__process_step">Step - 04</span>
-                        <div class="work__process__icon">
-                            <img class="light" src="{{ asset('user/assets/img/icons/wp_light_icon04.png') }}"
-                                alt="">
-                            <img class="dark" src="{{ asset('user/assets/img/icons/wp_icon04.png') }}" alt="">
-                        </div>
-                        <div class="work__process__content">
-                            <h4 class="title">Deliver</h4>
-                            <p>Process outcomes finalised & Implemented</p>
-                        </div>
+                    <div class="work__process__content">
+                        <h4 class="title">Deliver</h4>
+                        <p>Process outcomes finalised & Implemented</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- work-process-area-end -->
+    </div>
+</section>
+<!-- work-process-area-end -->
 
-    <!-- portfolio-area -->
-    @include('user.home.portfolio')
-    <!-- portfolio-area-end -->
+<!-- portfolio-area -->
+@include('user.home.portfolio')
+<!-- portfolio-area-end -->
 
-    <!-- partner-area -->
-    {{-- <section class="partner">
+<!-- partner-area -->
+{{-- <section class="partner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -296,10 +299,10 @@
             </div>
         </div>
     </section> --}}
-    <!-- partner-area-end -->
+<!-- partner-area-end -->
 
-    <!-- testimonial-area -->
-    {{-- <section class="testimonial">
+<!-- testimonial-area -->
+{{-- <section class="testimonial">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 order-0 order-lg-2">
@@ -355,13 +358,13 @@
             </div>
         </div>
     </section> --}}
-    <!-- testimonial-area-end -->
+<!-- testimonial-area-end -->
 
-    <!-- blog-area -->
-    @include('user.home.blog')
-    <!-- blog-area-end -->
+<!-- blog-area -->
+@include('user.home.blog')
+<!-- blog-area-end -->
 
-    <!-- contact-area -->
-    @include('user.home.query')
-    <!-- contact-area-end -->
+<!-- contact-area -->
+@include('user.home.query')
+<!-- contact-area-end -->
 @endsection

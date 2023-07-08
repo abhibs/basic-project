@@ -1,5 +1,8 @@
 @extends('user.layout.app')
 @section('content')
+@section('title')
+    Blog Detail
+@endsection
     <main>
 
         <!-- breadcrumb-area -->
@@ -21,12 +24,12 @@
             </div>
             <div class="breadcrumb__wrap__icon">
                 <ul>
-                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon01.pngs') }}" alt=""></li>
-                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon02.pngs') }}" alt=""></li>
-                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon03.pngs') }}" alt=""></li>
-                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon04.pngs') }}" alt=""></li>
-                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon05.pngs') }}" alt=""></li>
-                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon06.pngs') }}" alt=""></li>
+                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon01.png') }}" alt=""></li>
+                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon02.png') }}" alt=""></li>
+                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon03.png') }}" alt=""></li>
+                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon04.png') }}" alt=""></li>
+                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon05.png') }}" alt=""></li>
+                    <li><img src="{{ asset('user/assets/img/icons/breadcrumb_icon06.png') }}" alt=""></li>
                 </ul>
             </div>
         </section>
@@ -70,6 +73,7 @@
                                     </li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -81,11 +85,12 @@
                                     @foreach ($allblogs as $all)
                                         <li class="rc__post__item">
                                             <div class="rc__post__thumb">
-                                                <a href="blog-details.html"><img src="{{ asset($all->image) }} "
-                                                        alt=""></a>
+                                                <a href="{{ route('blog-detail', $all->id) }}"><img
+                                                        src="{{ asset($all->image) }} " alt=""></a>
                                             </div>
                                             <div class="rc__post__content">
-                                                <h5 class="title"><a href="blog-details.html">{{ $all->title }}
+                                                <h5 class="title"><a
+                                                        href="{{ route('blog-detail', $all->id) }}">{{ $all->title }}
                                                     </a></h5>
                                                 <span class="post-date"><i class="fal fa-calendar-alt"></i>
                                                     {{ Carbon\Carbon::parse($all->created_at)->diffForHumans() }} </span>
@@ -100,7 +105,8 @@
                                 <h4 class="widget-title">Categories</h4>
                                 <ul class="sidebar__cat">
                                     @foreach ($categories as $cat)
-                                        <li class="sidebar__cat__item"><a href="{{ route('category-blog', $cat->id) }}">{{ $cat->name }} </a>
+                                        <li class="sidebar__cat__item"><a
+                                                href="{{ route('category-blog', $cat->id) }}">{{ $cat->name }} </a>
                                         </li>
                                     @endforeach
                                 </ul>
