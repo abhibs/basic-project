@@ -26,6 +26,6 @@
         <a href="#aboutSection" class="scroll__link">Scroll down</a>
     </div>
     <div class="banner__video">
-        <a href="https://www.youtube.com/watch?v=XHOmBV4js_E" class="popup-video"><i class="fas fa-play"></i></a>
+        <a href="{{ $data->video }}" class="popup-video"><i class="fas fa-play"></i></a>
 
 </section>
